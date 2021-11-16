@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function getDigitPlace (num) {
+            if (!Number.isInteger(num) || num < 0 || num > 999) {
+                console.log('Число должно быть в диапозоне от 0 до 999');
+            } else {
+                return {
+                    units: num % 10,
+                    hundereds: Math.floor(num / 100),
+                    tens: Math.floor(num / 10) % 10,
+                };
+            }
+        }
+
+        let num = Number(prompt('Введите число от 0 до  999'));
+        console.log(getDigitPlace(num));
+
+    </script>
+   
+</body>
+</html>
+
